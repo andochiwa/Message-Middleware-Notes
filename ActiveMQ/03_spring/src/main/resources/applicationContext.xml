@@ -22,13 +22,27 @@
         <constructor-arg name="name" value="spring-active-queue"/>
     </bean>
 
-    <!--spring提供的JMS工具类，可以进行消息发送，接受-->
+    <!--主题-->
+    <bean class="org.apache.activemq.command.ActiveMQTopic" id="activeMQTopic">
+        <constructor-arg name="name" value="spring-active-topic"/>
+    </bean>
+
+    <!--spring提供的JMS工具类，可以进行消息发送，接受，配置是queue还是topic-->
     <bean class="org.springframework.jms.core.JmsTemplate" id="jmsTemplate">
         <property name="connectionFactory" ref="connectionFactory"/>
         <property name="defaultDestination" ref="activeMQQueue"/>
         <property name="messageConverter">
             <bean class="org.springframework.jms.support.converter.SimpleMessageConverter"/>
         </property>
+    </bean>
+
+
+    <!--配置监听器-->
+    <!--注册了监听器后，只需启动生产者即可自动监听并消费消息-->
+    <bean class="org.springframework.jms.listener.DefaultMessageListenerContainer" id="listenerContainer">
+        <property name="connectionFactory" ref="connectionFactory"/>
+        <property name="destination" ref="activeMQQueue"/>
+        <property name="messageListener" ref="myMessageListener"/>
     </bean>
 
 </beans>
