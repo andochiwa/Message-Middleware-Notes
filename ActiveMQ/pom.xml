@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>01_helloworld</module>
+        <module>02_JMS</module>
     </modules>
 
     <properties>

@@ -31,7 +31,7 @@ public class JmsProducerQueue {
         // 6.发送消息
         for (int i = 0; i < 3; i++) {
             // 创建消息
-            TextMessage textMessage = session.createTextMessage("msg---" + (i + 1));
+            TextMessage textMessage = session.createTextMessage("msg---" + i);
             // 发布
             producer.send(textMessage);
         }

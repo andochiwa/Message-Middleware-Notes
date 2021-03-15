@@ -46,7 +46,7 @@ public class JsmConsumerQueue {
             if (message instanceof TextMessage) {
                 TextMessage textMessage = (TextMessage) message;
                 try {
-                    System.out.println("接收到消息" + textMessage.getText());
+                    System.out.println("接收到Text消息" + textMessage.getText());
                 } catch (JMSException e) {
                     e.printStackTrace();
                 }
