@@ -110,3 +110,190 @@
 2021-03-15 04:06:34,817 | WARN  | Temporary Store limit is 51200 mb (current store usage is 0 mb). The data directory: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data only has 23688 mb of usable space. - resetting to maximum available disk space: 23688 mb | org.apache.activemq.broker.BrokerService | main
 2021-03-15 04:06:35,706 | INFO  | ActiveMQ WebConsole available at http://127.0.0.1:8161/ | org.apache.activemq.web.WebConsoleStarter | main
 2021-03-15 04:06:35,707 | INFO  | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2021-03-15 22:24:01,831 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@16f7c8c1: startup date [Mon Mar 15 22:24:01 JST 2021]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2021-03-15 22:24:03,566 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2021-03-15 22:24:03,672 | INFO  | Page File: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data\kahadb\db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2021-03-15 22:24:03,677 | INFO  | KahaDB is version 7 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2021-03-15 22:24:03,695 | INFO  | Page File: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data\kahadb\db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2021-03-15 22:24:03,725 | INFO  | Recovering from the journal @1:71061 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2021-03-15 22:24:03,741 | INFO  | Recovery replayed 1 operations from the journal in 0.043 seconds. | org.apache.activemq.store.kahadb.MessageDatabase | main
+2021-03-15 22:24:03,752 | INFO  | PListStore:[D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2021-03-15 22:24:03,901 | INFO  | Apache ActiveMQ 5.16.1 (localhost, ID:DESKTOP-L92Q0EQ-12153-1615814643766-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2021-03-15 22:24:03,952 | INFO  | Listening for connections at: tcp://DESKTOP-L92Q0EQ:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-15 22:24:03,953 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2021-03-15 22:24:03,958 | INFO  | Listening for connections at: amqp://DESKTOP-L92Q0EQ:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-15 22:24:03,959 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2021-03-15 22:24:03,966 | INFO  | Listening for connections at: stomp://DESKTOP-L92Q0EQ:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-15 22:24:03,967 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2021-03-15 22:24:03,973 | INFO  | Listening for connections at: mqtt://DESKTOP-L92Q0EQ:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-15 22:24:03,974 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2021-03-15 22:24:03,981 | INFO  | Starting Jetty server | org.apache.activemq.transport.WebTransportServerSupport | main
+2021-03-15 22:24:04,130 | INFO  | Creating Jetty connector | org.apache.activemq.transport.WebTransportServerSupport | main
+2021-03-15 22:24:04,517 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@99a78d7{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2021-03-15 22:24:04,799 | INFO  | Listening for connections at ws://DESKTOP-L92Q0EQ:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2021-03-15 22:24:04,799 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2021-03-15 22:24:04,800 | INFO  | Apache ActiveMQ 5.16.1 (localhost, ID:DESKTOP-L92Q0EQ-12153-1615814643766-0:1) started | org.apache.activemq.broker.BrokerService | main
+2021-03-15 22:24:04,800 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2021-03-15 22:24:04,806 | WARN  | Store limit is 102400 mb (current store usage is 0 mb). The data directory: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data\kahadb only has 23667 mb of usable space. - resetting to maximum available disk space: 23667 mb | org.apache.activemq.broker.BrokerService | main
+2021-03-15 22:24:04,813 | WARN  | Temporary Store limit is 51200 mb (current store usage is 0 mb). The data directory: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data only has 23667 mb of usable space. - resetting to maximum available disk space: 23667 mb | org.apache.activemq.broker.BrokerService | main
+2021-03-15 22:24:05,776 | INFO  | ActiveMQ WebConsole available at http://127.0.0.1:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2021-03-15 22:24:05,777 | INFO  | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2021-03-16 05:21:58,033 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@16f7c8c1: startup date [Tue Mar 16 05:21:58 JST 2021]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2021-03-16 05:21:59,431 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2021-03-16 05:21:59,511 | INFO  | Page File: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data\kahadb\db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2021-03-16 05:21:59,515 | INFO  | Page File: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data\kahadb\db.data. Recovered pageFile free list of size: 6 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2021-03-16 05:21:59,517 | INFO  | KahaDB is version 7 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2021-03-16 05:21:59,569 | INFO  | PListStore:[D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2021-03-16 05:21:59,705 | INFO  | Apache ActiveMQ 5.16.1 (localhost, ID:DESKTOP-L92Q0EQ-10384-1615839719582-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2021-03-16 05:21:59,782 | INFO  | Listening for connections at: tcp://DESKTOP-L92Q0EQ:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 05:21:59,784 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 05:21:59,788 | INFO  | Listening for connections at: amqp://DESKTOP-L92Q0EQ:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 05:21:59,790 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 05:21:59,798 | INFO  | Listening for connections at: stomp://DESKTOP-L92Q0EQ:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 05:21:59,800 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 05:21:59,806 | INFO  | Listening for connections at: mqtt://DESKTOP-L92Q0EQ:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 05:21:59,807 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 05:21:59,813 | INFO  | Starting Jetty server | org.apache.activemq.transport.WebTransportServerSupport | main
+2021-03-16 05:21:59,929 | INFO  | Creating Jetty connector | org.apache.activemq.transport.WebTransportServerSupport | main
+2021-03-16 05:22:00,111 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@6edcd0d8{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2021-03-16 05:22:00,381 | INFO  | Listening for connections at ws://DESKTOP-L92Q0EQ:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2021-03-16 05:22:00,382 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 05:22:00,386 | INFO  | Listening for connections at: nio://DESKTOP-L92Q0EQ:61618?trace=true | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 05:22:00,386 | INFO  | Connector nio started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 05:22:00,387 | INFO  | Apache ActiveMQ 5.16.1 (localhost, ID:DESKTOP-L92Q0EQ-10384-1615839719582-0:1) started | org.apache.activemq.broker.BrokerService | main
+2021-03-16 05:22:00,388 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2021-03-16 05:22:00,395 | WARN  | Store limit is 102400 mb (current store usage is 0 mb). The data directory: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data\kahadb only has 23664 mb of usable space. - resetting to maximum available disk space: 23664 mb | org.apache.activemq.broker.BrokerService | main
+2021-03-16 05:22:00,401 | WARN  | Temporary Store limit is 51200 mb (current store usage is 0 mb). The data directory: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data only has 23663 mb of usable space. - resetting to maximum available disk space: 23663 mb | org.apache.activemq.broker.BrokerService | main
+2021-03-16 05:22:01,323 | INFO  | ActiveMQ WebConsole available at http://127.0.0.1:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2021-03-16 05:22:01,323 | INFO  | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2021-03-16 05:26:05,904 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp1505964934-43
+2021-03-16 05:40:40,453 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@16f7c8c1: startup date [Tue Mar 16 05:40:40 JST 2021]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2021-03-16 05:40:41,069 | ERROR | Failed to load: class path resource [activemq.xml], reason: Line 119 in XML document from class path resource [activemq.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 119; columnNumber: 117; 对实体 "wireFormat.maxFrameSize" 的引用必须以 ';' 分隔符结尾。 | org.apache.activemq.xbean.XBeanBrokerFactory | main
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 119 in XML document from class path resource [activemq.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 119; columnNumber: 117; 对实体 "wireFormat.maxFrameSize" 的引用必须以 ';' 分隔符结尾。
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:399)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.loadBeanDefinitions(ResourceXmlApplicationContext.java:111)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.loadBeanDefinitions(ResourceXmlApplicationContext.java:104)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:126)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:614)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:514)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:64)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:52)
+	at org.apache.activemq.xbean.XBeanBrokerFactory$1.<init>(XBeanBrokerFactory.java:104)
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createApplicationContext(XBeanBrokerFactory.java:104)
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createBroker(XBeanBrokerFactory.java:67)
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:71)
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:54)
+	at org.apache.activemq.console.command.StartCommand.runTask(StartCommand.java:87)
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)
+	at org.apache.activemq.console.command.ShellCommand.runTask(ShellCommand.java:154)
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)
+	at org.apache.activemq.console.command.ShellCommand.main(ShellCommand.java:104)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.activemq.console.Main.runTaskClass(Main.java:262)
+	at org.apache.activemq.console.Main.main(Main.java:115)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 119; columnNumber: 117; 对实体 "wireFormat.maxFrameSize" 的引用必须以 ';' 分隔符结尾。
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1471)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.scanAttributeValue(XMLScanner.java:912)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanAttribute(XMLNSDocumentScannerImpl.java:447)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:250)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2725)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:541)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391)
+	... 25 more
+2021-03-16 05:41:08,525 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@16f7c8c1: startup date [Tue Mar 16 05:41:08 JST 2021]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2021-03-16 05:41:08,812 | ERROR | Failed to load: class path resource [activemq.xml], reason: Line 119 in XML document from class path resource [activemq.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 119; columnNumber: 117; 对实体 "wireFormat.maxFrameSize" 的引用必须以 ';' 分隔符结尾。 | org.apache.activemq.xbean.XBeanBrokerFactory | main
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 119 in XML document from class path resource [activemq.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 119; columnNumber: 117; 对实体 "wireFormat.maxFrameSize" 的引用必须以 ';' 分隔符结尾。
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:399)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.loadBeanDefinitions(ResourceXmlApplicationContext.java:111)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.loadBeanDefinitions(ResourceXmlApplicationContext.java:104)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:126)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:614)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:514)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:64)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:52)
+	at org.apache.activemq.xbean.XBeanBrokerFactory$1.<init>(XBeanBrokerFactory.java:104)
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createApplicationContext(XBeanBrokerFactory.java:104)
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createBroker(XBeanBrokerFactory.java:67)
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:71)
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:54)
+	at org.apache.activemq.console.command.StartCommand.runTask(StartCommand.java:87)
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)
+	at org.apache.activemq.console.command.ShellCommand.runTask(ShellCommand.java:154)
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)
+	at org.apache.activemq.console.command.ShellCommand.main(ShellCommand.java:104)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.activemq.console.Main.runTaskClass(Main.java:262)
+	at org.apache.activemq.console.Main.main(Main.java:115)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 119; columnNumber: 117; 对实体 "wireFormat.maxFrameSize" 的引用必须以 ';' 分隔符结尾。
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1471)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.scanAttributeValue(XMLScanner.java:912)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanAttribute(XMLNSDocumentScannerImpl.java:447)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:250)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2725)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:541)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391)
+	... 25 more
+2021-03-16 05:43:08,493 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@16f7c8c1: startup date [Tue Mar 16 05:43:08 JST 2021]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2021-03-16 05:43:09,274 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2021-03-16 05:43:09,312 | INFO  | Page File: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data\kahadb\db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2021-03-16 05:43:09,315 | INFO  | Page File: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data\kahadb\db.data. Recovered pageFile free list of size: 16 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2021-03-16 05:43:09,316 | INFO  | KahaDB is version 7 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2021-03-16 05:43:09,349 | INFO  | PListStore:[D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2021-03-16 05:43:09,480 | INFO  | Apache ActiveMQ 5.16.1 (localhost, ID:DESKTOP-L92Q0EQ-10778-1615840989361-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2021-03-16 05:43:09,530 | INFO  | Listening for connections at: tcp://DESKTOP-L92Q0EQ:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 05:43:09,531 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 05:43:09,535 | INFO  | Listening for connections at: amqp://DESKTOP-L92Q0EQ:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 05:43:09,536 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 05:43:09,539 | INFO  | Listening for connections at: stomp://DESKTOP-L92Q0EQ:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 05:43:09,540 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 05:43:09,543 | INFO  | Listening for connections at: mqtt://DESKTOP-L92Q0EQ:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 05:43:09,545 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 05:43:09,550 | INFO  | Starting Jetty server | org.apache.activemq.transport.WebTransportServerSupport | main
+2021-03-16 05:43:09,614 | INFO  | Creating Jetty connector | org.apache.activemq.transport.WebTransportServerSupport | main
+2021-03-16 05:43:09,737 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@2c306a57{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2021-03-16 05:43:09,993 | INFO  | Listening for connections at ws://DESKTOP-L92Q0EQ:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2021-03-16 05:43:09,993 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 05:43:10,001 | INFO  | Listening for connections at: auto+nio://DESKTOP-L92Q0EQ:61608?maximumConnections=1000&wireFormat.maxFrameSize=104857600&org.apache.activemq.transport.nio.SelectorManager.corePoolSize=20&org.apache.activemq.transport.nio.SelectorManager.maximumPoolSize=50 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 05:43:10,002 | INFO  | Connector auto+nio started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 05:43:10,003 | INFO  | Apache ActiveMQ 5.16.1 (localhost, ID:DESKTOP-L92Q0EQ-10778-1615840989361-0:1) started | org.apache.activemq.broker.BrokerService | main
+2021-03-16 05:43:10,003 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2021-03-16 05:43:10,011 | WARN  | Store limit is 102400 mb (current store usage is 0 mb). The data directory: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data\kahadb only has 23663 mb of usable space. - resetting to maximum available disk space: 23663 mb | org.apache.activemq.broker.BrokerService | main
+2021-03-16 05:43:10,016 | WARN  | Temporary Store limit is 51200 mb (current store usage is 0 mb). The data directory: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data only has 23663 mb of usable space. - resetting to maximum available disk space: 23663 mb | org.apache.activemq.broker.BrokerService | main
+2021-03-16 05:43:10,801 | INFO  | ActiveMQ WebConsole available at http://127.0.0.1:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2021-03-16 05:43:10,801 | INFO  | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main

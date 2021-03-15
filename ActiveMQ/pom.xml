@@ -12,6 +12,7 @@
         <module>01_helloworld</module>
         <module>02_JMS</module>
         <module>03_spring</module>
+        <module>05_protocol</module>
     </modules>
 
     <properties>
