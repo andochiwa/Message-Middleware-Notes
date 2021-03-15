@@ -8,11 +8,9 @@
  */
 package org.apache.jsp.tag.web.jms;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
+import javax.jms.Message;
 import javax.servlet.jsp.*;
 import java.util.Enumeration;
-import javax.jms.Message;
 
 public final class forEachMessage_tag
     extends javax.servlet.jsp.tagext.SimpleTagSupport

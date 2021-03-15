@@ -8,11 +8,9 @@
  */
 package org.apache.jsp.tag.web.jms;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
 import javax.servlet.jsp.*;
-import java.util.Date;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public final class formatTimestamp_tag
     extends javax.servlet.jsp.tagext.SimpleTagSupport

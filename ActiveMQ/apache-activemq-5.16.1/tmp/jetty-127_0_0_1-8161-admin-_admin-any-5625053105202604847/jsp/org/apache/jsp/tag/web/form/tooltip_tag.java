@@ -8,8 +8,6 @@
  */
 package org.apache.jsp.tag.web.form;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
 public final class tooltip_tag

@@ -13,6 +13,7 @@
         <module>02_JMS</module>
         <module>03_spring</module>
         <module>05_protocol</module>
+        <module>06_persistance</module>
     </modules>
 
     <properties>
