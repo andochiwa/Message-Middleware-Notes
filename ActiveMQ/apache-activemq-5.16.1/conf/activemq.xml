@@ -78,10 +78,27 @@
 
             http://activemq.apache.org/persistence.html
         -->
+		
+		<!--
         <persistenceAdapter>
             <kahaDB directory="${activemq.data}/kahadb"/>
         </persistenceAdapter>
-
+		
+		<persistenceAdapter>
+            <jdbcPersistenceAdapter dataSource="#mysql-ds" createTablesOnStartup="false"/>
+        </persistenceAdapter>
+		-->
+		
+		<persistenceFactory>
+            <journalPersistenceAdapterFactory dataSource="#mysql-ds"
+											  dataDirectory="activemq-data"
+										      createTablesOnStartup="false"
+										      journalLogFiles="4"
+										      journalLogFileSize="32768"
+										      useJournal="true"
+										      useQuickJournal="true" />
+        </persistenceFactory>
+		
 
           <!--
             The systemUsage controls the maximum amount of space the broker will
@@ -125,6 +142,17 @@
         </shutdownHooks>
 
     </broker>
+	
+	<bean id="mysql-ds" class="com.alibaba.druid.pool.DruidDataSource" >
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+		<property name="url" value="jdbc:mysql://localhost:3306/activemq?serverTimezone=Japan&amp;useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8"/>
+		<property name="username" value="root"/>
+		<property name="password" value="root"/>
+		<property name="initialSize" value="5" />
+		<property name="minIdle" value="1" />
+		<property name="maxActive" value="30"/>
+		<property name="maxWait" value="60000"/>
+	</bean>
 
     <!--
         Enable web consoles, REST and Ajax APIs and demos

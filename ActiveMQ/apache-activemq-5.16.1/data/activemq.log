@@ -297,3 +297,786 @@ Caused by: org.xml.sax.SAXParseException; lineNumber: 119; columnNumber: 117; 对
 2021-03-16 05:43:10,016 | WARN  | Temporary Store limit is 51200 mb (current store usage is 0 mb). The data directory: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data only has 23663 mb of usable space. - resetting to maximum available disk space: 23663 mb | org.apache.activemq.broker.BrokerService | main
 2021-03-16 05:43:10,801 | INFO  | ActiveMQ WebConsole available at http://127.0.0.1:8161/ | org.apache.activemq.web.WebConsoleStarter | main
 2021-03-16 05:43:10,801 | INFO  | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2021-03-16 22:06:05,439 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@16f7c8c1: startup date [Tue Mar 16 22:06:05 JST 2021]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2021-03-16 22:06:06,774 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2021-03-16 22:06:06,848 | INFO  | Page File: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data\kahadb\db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2021-03-16 22:06:06,851 | INFO  | Page File: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data\kahadb\db.data. Recovered pageFile free list of size: 16 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2021-03-16 22:06:06,853 | INFO  | KahaDB is version 7 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2021-03-16 22:06:06,889 | INFO  | PListStore:[D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2021-03-16 22:06:07,022 | INFO  | Apache ActiveMQ 5.16.1 (localhost, ID:DESKTOP-L92Q0EQ-11552-1615899966902-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2021-03-16 22:06:07,092 | INFO  | Listening for connections at: tcp://DESKTOP-L92Q0EQ:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 22:06:07,093 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 22:06:07,097 | INFO  | Listening for connections at: amqp://DESKTOP-L92Q0EQ:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 22:06:07,098 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 22:06:07,102 | INFO  | Listening for connections at: stomp://DESKTOP-L92Q0EQ:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 22:06:07,103 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 22:06:07,106 | INFO  | Listening for connections at: mqtt://DESKTOP-L92Q0EQ:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 22:06:07,107 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 22:06:07,112 | INFO  | Starting Jetty server | org.apache.activemq.transport.WebTransportServerSupport | main
+2021-03-16 22:06:07,219 | INFO  | Creating Jetty connector | org.apache.activemq.transport.WebTransportServerSupport | main
+2021-03-16 22:06:07,546 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@2c306a57{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2021-03-16 22:06:07,880 | INFO  | Listening for connections at ws://DESKTOP-L92Q0EQ:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2021-03-16 22:06:07,880 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 22:06:07,889 | INFO  | Listening for connections at: auto+nio://DESKTOP-L92Q0EQ:61608?maximumConnections=1000&wireFormat.maxFrameSize=104857600&org.apache.activemq.transport.nio.SelectorManager.corePoolSize=20&org.apache.activemq.transport.nio.SelectorManager.maximumPoolSize=50 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 22:06:07,889 | INFO  | Connector auto+nio started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 22:06:07,890 | INFO  | Apache ActiveMQ 5.16.1 (localhost, ID:DESKTOP-L92Q0EQ-11552-1615899966902-0:1) started | org.apache.activemq.broker.BrokerService | main
+2021-03-16 22:06:07,890 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2021-03-16 22:06:07,900 | WARN  | Store limit is 102400 mb (current store usage is 0 mb). The data directory: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data\kahadb only has 23663 mb of usable space. - resetting to maximum available disk space: 23663 mb | org.apache.activemq.broker.BrokerService | main
+2021-03-16 22:06:07,907 | WARN  | Temporary Store limit is 51200 mb (current store usage is 0 mb). The data directory: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data only has 23663 mb of usable space. - resetting to maximum available disk space: 23663 mb | org.apache.activemq.broker.BrokerService | main
+2021-03-16 22:06:09,270 | INFO  | ActiveMQ WebConsole available at http://127.0.0.1:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2021-03-16 22:06:09,271 | INFO  | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2021-03-16 22:37:43,358 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@16f7c8c1: startup date [Tue Mar 16 22:37:43 JST 2021]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2021-03-16 22:37:44,221 | WARN  | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.apache.activemq.xbean.XBeanBrokerService#0' defined in class path resource [activemq.xml]: Cannot create inner bean '(inner bean)#b968a76' of type [org.apache.activemq.store.jdbc.JDBCPersistenceAdapter] while setting bean property 'persistenceAdapter'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#b968a76' defined in class path resource [activemq.xml]: Cannot resolve reference to bean 'mysql-ds' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'mysql-ds' defined in class path resource [activemq.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2021-03-16 22:37:44,229 | ERROR | Failed to load: class path resource [activemq.xml], reason: Error creating bean with name 'org.apache.activemq.xbean.XBeanBrokerService#0' defined in class path resource [activemq.xml]: Cannot create inner bean '(inner bean)#b968a76' of type [org.apache.activemq.store.jdbc.JDBCPersistenceAdapter] while setting bean property 'persistenceAdapter'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#b968a76' defined in class path resource [activemq.xml]: Cannot resolve reference to bean 'mysql-ds' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'mysql-ds' defined in class path resource [activemq.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource | org.apache.activemq.xbean.XBeanBrokerFactory | main
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.apache.activemq.xbean.XBeanBrokerService#0' defined in class path resource [activemq.xml]: Cannot create inner bean '(inner bean)#b968a76' of type [org.apache.activemq.store.jdbc.JDBCPersistenceAdapter] while setting bean property 'persistenceAdapter'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#b968a76' defined in class path resource [activemq.xml]: Cannot resolve reference to bean 'mysql-ds' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'mysql-ds' defined in class path resource [activemq.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:313)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:129)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1522)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1269)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:481)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:756)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:64)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:52)
+	at org.apache.activemq.xbean.XBeanBrokerFactory$1.<init>(XBeanBrokerFactory.java:104)
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createApplicationContext(XBeanBrokerFactory.java:104)
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createBroker(XBeanBrokerFactory.java:67)
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:71)
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:54)
+	at org.apache.activemq.console.command.StartCommand.runTask(StartCommand.java:87)
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)
+	at org.apache.activemq.console.command.ShellCommand.runTask(ShellCommand.java:154)
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)
+	at org.apache.activemq.console.command.ShellCommand.main(ShellCommand.java:104)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.activemq.console.Main.runTaskClass(Main.java:262)
+	at org.apache.activemq.console.Main.main(Main.java:115)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#b968a76' defined in class path resource [activemq.xml]: Cannot resolve reference to bean 'mysql-ds' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'mysql-ds' defined in class path resource [activemq.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1522)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1269)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:481)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:299)
+	... 30 more
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'mysql-ds' defined in class path resource [activemq.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1397)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:454)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 36 more
+Caused by: java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:435)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:589)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:251)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:408)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1444)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1389)
+	... 42 more
+2021-03-16 22:38:08,117 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@16f7c8c1: startup date [Tue Mar 16 22:38:08 JST 2021]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2021-03-16 22:38:08,921 | WARN  | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.apache.activemq.xbean.XBeanBrokerService#0' defined in class path resource [activemq.xml]: Cannot create inner bean '(inner bean)#b968a76' of type [org.apache.activemq.store.jdbc.JDBCPersistenceAdapter] while setting bean property 'persistenceAdapter'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#b968a76' defined in class path resource [activemq.xml]: Cannot resolve reference to bean 'mysql-ds' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'mysql-ds' defined in class path resource [activemq.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2021-03-16 22:38:08,927 | ERROR | Failed to load: class path resource [activemq.xml], reason: Error creating bean with name 'org.apache.activemq.xbean.XBeanBrokerService#0' defined in class path resource [activemq.xml]: Cannot create inner bean '(inner bean)#b968a76' of type [org.apache.activemq.store.jdbc.JDBCPersistenceAdapter] while setting bean property 'persistenceAdapter'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#b968a76' defined in class path resource [activemq.xml]: Cannot resolve reference to bean 'mysql-ds' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'mysql-ds' defined in class path resource [activemq.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource | org.apache.activemq.xbean.XBeanBrokerFactory | main
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.apache.activemq.xbean.XBeanBrokerService#0' defined in class path resource [activemq.xml]: Cannot create inner bean '(inner bean)#b968a76' of type [org.apache.activemq.store.jdbc.JDBCPersistenceAdapter] while setting bean property 'persistenceAdapter'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#b968a76' defined in class path resource [activemq.xml]: Cannot resolve reference to bean 'mysql-ds' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'mysql-ds' defined in class path resource [activemq.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:313)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:129)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1522)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1269)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:481)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:756)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:64)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:52)
+	at org.apache.activemq.xbean.XBeanBrokerFactory$1.<init>(XBeanBrokerFactory.java:104)
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createApplicationContext(XBeanBrokerFactory.java:104)
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createBroker(XBeanBrokerFactory.java:67)
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:71)
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:54)
+	at org.apache.activemq.console.command.StartCommand.runTask(StartCommand.java:87)
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)
+	at org.apache.activemq.console.command.ShellCommand.runTask(ShellCommand.java:154)
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)
+	at org.apache.activemq.console.command.ShellCommand.main(ShellCommand.java:104)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.activemq.console.Main.runTaskClass(Main.java:262)
+	at org.apache.activemq.console.Main.main(Main.java:115)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#b968a76' defined in class path resource [activemq.xml]: Cannot resolve reference to bean 'mysql-ds' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'mysql-ds' defined in class path resource [activemq.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1522)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1269)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:481)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:299)
+	... 30 more
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'mysql-ds' defined in class path resource [activemq.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1397)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:454)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 36 more
+Caused by: java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:435)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:589)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:251)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:408)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1444)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1389)
+	... 42 more
+2021-03-16 22:43:06,341 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@16f7c8c1: startup date [Tue Mar 16 22:43:06 JST 2021]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2021-03-16 22:43:07,140 | WARN  | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.apache.activemq.xbean.XBeanBrokerService#0' defined in class path resource [activemq.xml]: Cannot create inner bean '(inner bean)#b968a76' of type [org.apache.activemq.store.jdbc.JDBCPersistenceAdapter] while setting bean property 'persistenceAdapter'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#b968a76' defined in class path resource [activemq.xml]: Cannot resolve reference to bean 'mysql-ds' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'mysql-ds' defined in class path resource [activemq.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2021-03-16 22:43:07,145 | ERROR | Failed to load: class path resource [activemq.xml], reason: Error creating bean with name 'org.apache.activemq.xbean.XBeanBrokerService#0' defined in class path resource [activemq.xml]: Cannot create inner bean '(inner bean)#b968a76' of type [org.apache.activemq.store.jdbc.JDBCPersistenceAdapter] while setting bean property 'persistenceAdapter'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#b968a76' defined in class path resource [activemq.xml]: Cannot resolve reference to bean 'mysql-ds' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'mysql-ds' defined in class path resource [activemq.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource | org.apache.activemq.xbean.XBeanBrokerFactory | main
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.apache.activemq.xbean.XBeanBrokerService#0' defined in class path resource [activemq.xml]: Cannot create inner bean '(inner bean)#b968a76' of type [org.apache.activemq.store.jdbc.JDBCPersistenceAdapter] while setting bean property 'persistenceAdapter'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#b968a76' defined in class path resource [activemq.xml]: Cannot resolve reference to bean 'mysql-ds' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'mysql-ds' defined in class path resource [activemq.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:313)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:129)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1522)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1269)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:481)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:756)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:64)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:52)
+	at org.apache.activemq.xbean.XBeanBrokerFactory$1.<init>(XBeanBrokerFactory.java:104)
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createApplicationContext(XBeanBrokerFactory.java:104)
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createBroker(XBeanBrokerFactory.java:67)
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:71)
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:54)
+	at org.apache.activemq.console.command.StartCommand.runTask(StartCommand.java:87)
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)
+	at org.apache.activemq.console.command.ShellCommand.runTask(ShellCommand.java:154)
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)
+	at org.apache.activemq.console.command.ShellCommand.main(ShellCommand.java:104)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.activemq.console.Main.runTaskClass(Main.java:262)
+	at org.apache.activemq.console.Main.main(Main.java:115)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#b968a76' defined in class path resource [activemq.xml]: Cannot resolve reference to bean 'mysql-ds' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'mysql-ds' defined in class path resource [activemq.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1522)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1269)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:481)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:299)
+	... 30 more
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'mysql-ds' defined in class path resource [activemq.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1397)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:454)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 36 more
+Caused by: java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:435)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:589)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:251)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:408)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1444)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1389)
+	... 42 more
+2021-03-16 22:43:52,458 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@16f7c8c1: startup date [Tue Mar 16 22:43:52 JST 2021]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2021-03-16 22:43:53,238 | WARN  | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.apache.activemq.xbean.XBeanBrokerService#0' defined in class path resource [activemq.xml]: Cannot create inner bean '(inner bean)#b968a76' of type [org.apache.activemq.store.jdbc.JDBCPersistenceAdapter] while setting bean property 'persistenceAdapter'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#b968a76' defined in class path resource [activemq.xml]: Cannot resolve reference to bean 'mysql-ds' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'mysql-ds' defined in class path resource [activemq.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2021-03-16 22:43:53,246 | ERROR | Failed to load: class path resource [activemq.xml], reason: Error creating bean with name 'org.apache.activemq.xbean.XBeanBrokerService#0' defined in class path resource [activemq.xml]: Cannot create inner bean '(inner bean)#b968a76' of type [org.apache.activemq.store.jdbc.JDBCPersistenceAdapter] while setting bean property 'persistenceAdapter'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#b968a76' defined in class path resource [activemq.xml]: Cannot resolve reference to bean 'mysql-ds' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'mysql-ds' defined in class path resource [activemq.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource | org.apache.activemq.xbean.XBeanBrokerFactory | main
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.apache.activemq.xbean.XBeanBrokerService#0' defined in class path resource [activemq.xml]: Cannot create inner bean '(inner bean)#b968a76' of type [org.apache.activemq.store.jdbc.JDBCPersistenceAdapter] while setting bean property 'persistenceAdapter'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#b968a76' defined in class path resource [activemq.xml]: Cannot resolve reference to bean 'mysql-ds' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'mysql-ds' defined in class path resource [activemq.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:313)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:129)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1522)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1269)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:481)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:756)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:64)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:52)
+	at org.apache.activemq.xbean.XBeanBrokerFactory$1.<init>(XBeanBrokerFactory.java:104)
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createApplicationContext(XBeanBrokerFactory.java:104)
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createBroker(XBeanBrokerFactory.java:67)
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:71)
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:54)
+	at org.apache.activemq.console.command.StartCommand.runTask(StartCommand.java:87)
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)
+	at org.apache.activemq.console.command.ShellCommand.runTask(ShellCommand.java:154)
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)
+	at org.apache.activemq.console.command.ShellCommand.main(ShellCommand.java:104)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.activemq.console.Main.runTaskClass(Main.java:262)
+	at org.apache.activemq.console.Main.main(Main.java:115)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#b968a76' defined in class path resource [activemq.xml]: Cannot resolve reference to bean 'mysql-ds' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'mysql-ds' defined in class path resource [activemq.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1522)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1269)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:481)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:299)
+	... 30 more
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.alibaba.druid.pool.DruidDataSource] for bean with name 'mysql-ds' defined in class path resource [activemq.xml]; nested exception is java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1397)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:454)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 36 more
+Caused by: java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:435)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:589)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:251)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:408)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1444)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1389)
+	... 42 more
+2021-03-16 22:45:05,109 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@31f924f5: startup date [Tue Mar 16 22:45:05 JST 2021]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2021-03-16 22:45:05,989 | WARN  | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.apache.activemq.xbean.XBeanBrokerService#0' defined in class path resource [activemq.xml]: Cannot create inner bean '(inner bean)#293d0107' of type [org.apache.activemq.store.jdbc.JDBCPersistenceAdapter] while setting bean property 'persistenceAdapter'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#293d0107' defined in class path resource [activemq.xml]: Cannot resolve reference to bean 'mysql-ds' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mysql-ds' defined in class path resource [activemq.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'maxTotal' of bean class [com.alibaba.druid.pool.DruidDataSource]: Bean property 'maxTotal' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter? | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2021-03-16 22:45:05,996 | ERROR | Failed to load: class path resource [activemq.xml], reason: Error creating bean with name 'org.apache.activemq.xbean.XBeanBrokerService#0' defined in class path resource [activemq.xml]: Cannot create inner bean '(inner bean)#293d0107' of type [org.apache.activemq.store.jdbc.JDBCPersistenceAdapter] while setting bean property 'persistenceAdapter'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#293d0107' defined in class path resource [activemq.xml]: Cannot resolve reference to bean 'mysql-ds' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mysql-ds' defined in class path resource [activemq.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'maxTotal' of bean class [com.alibaba.druid.pool.DruidDataSource]: Bean property 'maxTotal' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter? | org.apache.activemq.xbean.XBeanBrokerFactory | main
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.apache.activemq.xbean.XBeanBrokerService#0' defined in class path resource [activemq.xml]: Cannot create inner bean '(inner bean)#293d0107' of type [org.apache.activemq.store.jdbc.JDBCPersistenceAdapter] while setting bean property 'persistenceAdapter'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#293d0107' defined in class path resource [activemq.xml]: Cannot resolve reference to bean 'mysql-ds' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mysql-ds' defined in class path resource [activemq.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'maxTotal' of bean class [com.alibaba.druid.pool.DruidDataSource]: Bean property 'maxTotal' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:313)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:129)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1522)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1269)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:481)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:756)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:64)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:52)
+	at org.apache.activemq.xbean.XBeanBrokerFactory$1.<init>(XBeanBrokerFactory.java:104)
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createApplicationContext(XBeanBrokerFactory.java:104)
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createBroker(XBeanBrokerFactory.java:67)
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:71)
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:54)
+	at org.apache.activemq.console.command.StartCommand.runTask(StartCommand.java:87)
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)
+	at org.apache.activemq.console.command.ShellCommand.runTask(ShellCommand.java:154)
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)
+	at org.apache.activemq.console.command.ShellCommand.main(ShellCommand.java:104)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.activemq.console.Main.runTaskClass(Main.java:262)
+	at org.apache.activemq.console.Main.main(Main.java:115)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#293d0107' defined in class path resource [activemq.xml]: Cannot resolve reference to bean 'mysql-ds' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mysql-ds' defined in class path resource [activemq.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'maxTotal' of bean class [com.alibaba.druid.pool.DruidDataSource]: Bean property 'maxTotal' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1522)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1269)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:481)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:299)
+	... 30 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mysql-ds' defined in class path resource [activemq.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'maxTotal' of bean class [com.alibaba.druid.pool.DruidDataSource]: Bean property 'maxTotal' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1559)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1269)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:481)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 36 more
+Caused by: org.springframework.beans.NotWritablePropertyException: Invalid property 'maxTotal' of bean class [com.alibaba.druid.pool.DruidDataSource]: Bean property 'maxTotal' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.BeanWrapperImpl.createNotWritablePropertyException(BeanWrapperImpl.java:239)
+	at org.springframework.beans.AbstractNestablePropertyAccessor.processLocalProperty(AbstractNestablePropertyAccessor.java:439)
+	at org.springframework.beans.AbstractNestablePropertyAccessor.setPropertyValue(AbstractNestablePropertyAccessor.java:290)
+	at org.springframework.beans.AbstractNestablePropertyAccessor.setPropertyValue(AbstractNestablePropertyAccessor.java:278)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:102)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:77)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1555)
+	... 44 more
+2021-03-16 22:46:15,345 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@31f924f5: startup date [Tue Mar 16 22:46:15 JST 2021]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2021-03-16 22:46:16,169 | INFO  | Using Persistence Adapter: JDBCPersistenceAdapter({
+	CreateTime:"2021-03-16 22:46:16",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+}) | org.apache.activemq.broker.BrokerService | main
+2021-03-16 22:46:16,707 | INFO  | {dataSource-1} inited | com.alibaba.druid.pool.DruidDataSource | main
+2021-03-16 22:46:16,724 | INFO  | Database adapter driver override not found for : [mysql_connector_j].  Will use default implementation. | org.apache.activemq.store.jdbc.JDBCPersistenceAdapter | main
+2021-03-16 22:46:27,391 | INFO  | Database lock driver override not found for : [mysql_connector_j].  Will use default implementation. | org.apache.activemq.store.jdbc.JDBCPersistenceAdapter | main
+2021-03-16 22:46:27,393 | INFO  | Attempting to acquire the exclusive lock to become the Master broker | org.apache.activemq.store.jdbc.DefaultDatabaseLocker | main
+2021-03-16 22:46:27,399 | INFO  | Becoming the master on dataSource: {
+	CreateTime:"2021-03-16 22:46:16",
+	ActiveCount:1,
+	PoolingCount:4,
+	CreateCount:5,
+	DestroyCount:0,
+	CloseCount:3,
+	ConnectCount:4,
+	Connections:[
+		{ID:1914740115, ConnectTime:"2021-03-16 22:46:16", UseCount:0, LastActiveTime:"2021-03-16 22:46:16"},
+		{ID:646445398, ConnectTime:"2021-03-16 22:46:16", UseCount:0, LastActiveTime:"2021-03-16 22:46:16"},
+		{ID:502102804, ConnectTime:"2021-03-16 22:46:16", UseCount:0, LastActiveTime:"2021-03-16 22:46:16"},
+		{ID:700348233, ConnectTime:"2021-03-16 22:46:16", UseCount:0, LastActiveTime:"2021-03-16 22:46:16"}
+	]
+} | org.apache.activemq.store.jdbc.DefaultDatabaseLocker | main
+2021-03-16 22:46:27,401 | INFO  | PListStore:[D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2021-03-16 22:46:27,534 | INFO  | Apache ActiveMQ 5.16.1 (localhost, ID:DESKTOP-L92Q0EQ-12772-1615902387412-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2021-03-16 22:46:27,562 | INFO  | Listening for connections at: tcp://DESKTOP-L92Q0EQ:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 22:46:27,562 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 22:46:27,565 | INFO  | Listening for connections at: amqp://DESKTOP-L92Q0EQ:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 22:46:27,566 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 22:46:27,570 | INFO  | Listening for connections at: stomp://DESKTOP-L92Q0EQ:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 22:46:27,571 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 22:46:27,574 | INFO  | Listening for connections at: mqtt://DESKTOP-L92Q0EQ:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 22:46:27,575 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 22:46:27,579 | INFO  | Starting Jetty server | org.apache.activemq.transport.WebTransportServerSupport | main
+2021-03-16 22:46:27,635 | INFO  | Creating Jetty connector | org.apache.activemq.transport.WebTransportServerSupport | main
+2021-03-16 22:46:27,731 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@624a24f6{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2021-03-16 22:46:28,010 | INFO  | Listening for connections at ws://DESKTOP-L92Q0EQ:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2021-03-16 22:46:28,010 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 22:46:28,017 | INFO  | Listening for connections at: auto+nio://DESKTOP-L92Q0EQ:61608?maximumConnections=1000&wireFormat.maxFrameSize=104857600&org.apache.activemq.transport.nio.SelectorManager.corePoolSize=20&org.apache.activemq.transport.nio.SelectorManager.maximumPoolSize=50 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 22:46:28,018 | INFO  | Connector auto+nio started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 22:46:28,018 | INFO  | Apache ActiveMQ 5.16.1 (localhost, ID:DESKTOP-L92Q0EQ-12772-1615902387412-0:1) started | org.apache.activemq.broker.BrokerService | main
+2021-03-16 22:46:28,019 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2021-03-16 22:46:28,027 | WARN  | Store limit is 102400 mb (current store usage is 0 mb). The data directory: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data only has 23634 mb of usable space. - resetting to maximum available disk space: 23634 mb | org.apache.activemq.broker.BrokerService | main
+2021-03-16 22:46:28,033 | WARN  | Temporary Store limit is 51200 mb (current store usage is 0 mb). The data directory: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data only has 23634 mb of usable space. - resetting to maximum available disk space: 23634 mb | org.apache.activemq.broker.BrokerService | main
+2021-03-16 22:46:28,848 | INFO  | ActiveMQ WebConsole available at http://127.0.0.1:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2021-03-16 22:46:28,848 | INFO  | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2021-03-16 22:47:17,242 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@31f924f5: startup date [Tue Mar 16 22:47:17 JST 2021]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2021-03-16 22:47:18,163 | INFO  | Using Persistence Adapter: JDBCPersistenceAdapter({
+	CreateTime:"2021-03-16 22:47:18",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+}) | org.apache.activemq.broker.BrokerService | main
+2021-03-16 22:47:18,409 | INFO  | {dataSource-1} inited | com.alibaba.druid.pool.DruidDataSource | main
+2021-03-16 22:47:18,432 | INFO  | Database adapter driver override not found for : [mysql_connector_j].  Will use default implementation. | org.apache.activemq.store.jdbc.JDBCPersistenceAdapter | main
+2021-03-16 22:47:22,049 | INFO  | Database lock driver override not found for : [mysql_connector_j].  Will use default implementation. | org.apache.activemq.store.jdbc.JDBCPersistenceAdapter | main
+2021-03-16 22:47:22,051 | INFO  | Attempting to acquire the exclusive lock to become the Master broker | org.apache.activemq.store.jdbc.DefaultDatabaseLocker | main
+2021-03-16 22:47:22,055 | INFO  | Becoming the master on dataSource: {
+	CreateTime:"2021-03-16 22:47:18",
+	ActiveCount:1,
+	PoolingCount:4,
+	CreateCount:5,
+	DestroyCount:0,
+	CloseCount:3,
+	ConnectCount:4,
+	Connections:[
+		{ID:1338770454, ConnectTime:"2021-03-16 22:47:18", UseCount:0, LastActiveTime:"2021-03-16 22:47:18"},
+		{ID:836972194, ConnectTime:"2021-03-16 22:47:18", UseCount:0, LastActiveTime:"2021-03-16 22:47:18"},
+		{ID:343128256, ConnectTime:"2021-03-16 22:47:18", UseCount:0, LastActiveTime:"2021-03-16 22:47:18"},
+		{ID:1532756055, ConnectTime:"2021-03-16 22:47:18", UseCount:0, LastActiveTime:"2021-03-16 22:47:18"}
+	]
+} | org.apache.activemq.store.jdbc.DefaultDatabaseLocker | main
+2021-03-16 22:47:22,058 | INFO  | PListStore:[D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2021-03-16 22:47:22,191 | INFO  | Apache ActiveMQ 5.16.1 (localhost, ID:DESKTOP-L92Q0EQ-12810-1615902442067-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2021-03-16 22:47:22,217 | INFO  | Listening for connections at: tcp://DESKTOP-L92Q0EQ:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 22:47:22,218 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 22:47:22,221 | INFO  | Listening for connections at: amqp://DESKTOP-L92Q0EQ:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 22:47:22,222 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 22:47:22,225 | INFO  | Listening for connections at: stomp://DESKTOP-L92Q0EQ:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 22:47:22,226 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 22:47:22,229 | INFO  | Listening for connections at: mqtt://DESKTOP-L92Q0EQ:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 22:47:22,230 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 22:47:22,234 | INFO  | Starting Jetty server | org.apache.activemq.transport.WebTransportServerSupport | main
+2021-03-16 22:47:22,300 | INFO  | Creating Jetty connector | org.apache.activemq.transport.WebTransportServerSupport | main
+2021-03-16 22:47:22,403 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@4da9f723{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2021-03-16 22:47:22,677 | INFO  | Listening for connections at ws://DESKTOP-L92Q0EQ:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2021-03-16 22:47:22,678 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 22:47:22,686 | INFO  | Listening for connections at: auto+nio://DESKTOP-L92Q0EQ:61608?maximumConnections=1000&wireFormat.maxFrameSize=104857600&org.apache.activemq.transport.nio.SelectorManager.corePoolSize=20&org.apache.activemq.transport.nio.SelectorManager.maximumPoolSize=50 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 22:47:22,687 | INFO  | Connector auto+nio started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 22:47:22,687 | INFO  | Apache ActiveMQ 5.16.1 (localhost, ID:DESKTOP-L92Q0EQ-12810-1615902442067-0:1) started | org.apache.activemq.broker.BrokerService | main
+2021-03-16 22:47:22,688 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2021-03-16 22:47:22,695 | WARN  | Store limit is 102400 mb (current store usage is 0 mb). The data directory: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data only has 23634 mb of usable space. - resetting to maximum available disk space: 23634 mb | org.apache.activemq.broker.BrokerService | main
+2021-03-16 22:47:22,701 | WARN  | Temporary Store limit is 51200 mb (current store usage is 0 mb). The data directory: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data only has 23634 mb of usable space. - resetting to maximum available disk space: 23634 mb | org.apache.activemq.broker.BrokerService | main
+2021-03-16 22:47:23,484 | INFO  | ActiveMQ WebConsole available at http://127.0.0.1:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2021-03-16 22:47:23,484 | INFO  | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2021-03-16 22:52:22,129 | WARN  | discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/activemq?serverTimezone=Japan&useSSL=false&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 299860 | com.alibaba.druid.pool.DruidAbstractDataSource | ActiveMQ JDBC PA Scheduled Task
+2021-03-16 22:52:22,131 | WARN  | discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/activemq?serverTimezone=Japan&useSSL=false&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 303746 | com.alibaba.druid.pool.DruidAbstractDataSource | ActiveMQ JDBC PA Scheduled Task
+2021-03-16 22:52:22,132 | WARN  | discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/activemq?serverTimezone=Japan&useSSL=false&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 303753 | com.alibaba.druid.pool.DruidAbstractDataSource | ActiveMQ JDBC PA Scheduled Task
+2021-03-16 22:52:22,133 | WARN  | discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/activemq?serverTimezone=Japan&useSSL=false&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 303766 | com.alibaba.druid.pool.DruidAbstractDataSource | ActiveMQ JDBC PA Scheduled Task
+2021-03-16 22:57:22,137 | WARN  | discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/activemq?serverTimezone=Japan&useSSL=false&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 300000 | com.alibaba.druid.pool.DruidAbstractDataSource | ActiveMQ JDBC PA Scheduled Task
+2021-03-16 22:59:57,987 | WARN  | discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/activemq?serverTimezone=Japan&useSSL=false&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 155841 | com.alibaba.druid.pool.DruidAbstractDataSource | ActiveMQ NIO Worker 5
+2021-03-16 23:02:22,146 | WARN  | discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/activemq?serverTimezone=Japan&useSSL=false&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 143756 | com.alibaba.druid.pool.DruidAbstractDataSource | ActiveMQ JDBC PA Scheduled Task
+2021-03-16 23:07:22,154 | WARN  | discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/activemq?serverTimezone=Japan&useSSL=false&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 285804 | com.alibaba.druid.pool.DruidAbstractDataSource | ActiveMQ JDBC PA Scheduled Task
+2021-03-16 23:12:22,163 | WARN  | discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/activemq?serverTimezone=Japan&useSSL=false&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 300001 | com.alibaba.druid.pool.DruidAbstractDataSource | ActiveMQ JDBC PA Scheduled Task
+2021-03-16 23:17:22,173 | WARN  | discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/activemq?serverTimezone=Japan&useSSL=false&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 300001 | com.alibaba.druid.pool.DruidAbstractDataSource | ActiveMQ JDBC PA Scheduled Task
+2021-03-16 23:22:22,183 | WARN  | discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/activemq?serverTimezone=Japan&useSSL=false&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 300001 | com.alibaba.druid.pool.DruidAbstractDataSource | ActiveMQ JDBC PA Scheduled Task
+2021-03-16 23:23:42,637 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@31f924f5: startup date [Tue Mar 16 23:23:42 JST 2021]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2021-03-16 23:23:42,945 | ERROR | Failed to load: class path resource [activemq.xml], reason: Line 99 in XML document from class path resource [activemq.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 99; columnNumber: 42; cvc-complex-type.2.4.a: 发现了以元素 '{"http://activemq.apache.org/schema/core":journalPersistenceAdapterFactory}' 开头的无效内容。应以 '{"http://activemq.apache.org/schema/core":jdbcPersistenceAdapter, "http://activemq.apache.org/schema/core":journalPersistenceAdapter, "http://activemq.apache.org/schema/core":kahaDB, "http://activemq.apache.org/schema/core":levelDB, "http://activemq.apache.org/schema/core":mKahaDB, "http://activemq.apache.org/schema/core":memoryPersistenceAdapter, "http://activemq.apache.org/schema/core":replicatedLevelDB, WC[##other:"http://activemq.apache.org/schema/core"]}' 之一开头。 | org.apache.activemq.xbean.XBeanBrokerFactory | main
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 99 in XML document from class path resource [activemq.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 99; columnNumber: 42; cvc-complex-type.2.4.a: 发现了以元素 '{"http://activemq.apache.org/schema/core":journalPersistenceAdapterFactory}' 开头的无效内容。应以 '{"http://activemq.apache.org/schema/core":jdbcPersistenceAdapter, "http://activemq.apache.org/schema/core":journalPersistenceAdapter, "http://activemq.apache.org/schema/core":kahaDB, "http://activemq.apache.org/schema/core":levelDB, "http://activemq.apache.org/schema/core":mKahaDB, "http://activemq.apache.org/schema/core":memoryPersistenceAdapter, "http://activemq.apache.org/schema/core":replicatedLevelDB, WC[##other:"http://activemq.apache.org/schema/core"]}' 之一开头。
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:399)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.loadBeanDefinitions(ResourceXmlApplicationContext.java:111)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.loadBeanDefinitions(ResourceXmlApplicationContext.java:104)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:126)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:614)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:514)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:64)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:52)
+	at org.apache.activemq.xbean.XBeanBrokerFactory$1.<init>(XBeanBrokerFactory.java:104)
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createApplicationContext(XBeanBrokerFactory.java:104)
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createBroker(XBeanBrokerFactory.java:67)
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:71)
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:54)
+	at org.apache.activemq.console.command.StartCommand.runTask(StartCommand.java:87)
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)
+	at org.apache.activemq.console.command.ShellCommand.runTask(ShellCommand.java:154)
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)
+	at org.apache.activemq.console.command.ShellCommand.main(ShellCommand.java:104)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.activemq.console.Main.runTaskClass(Main.java:262)
+	at org.apache.activemq.console.Main.main(Main.java:115)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 99; columnNumber: 42; cvc-complex-type.2.4.a: 发现了以元素 '{"http://activemq.apache.org/schema/core":journalPersistenceAdapterFactory}' 开头的无效内容。应以 '{"http://activemq.apache.org/schema/core":jdbcPersistenceAdapter, "http://activemq.apache.org/schema/core":journalPersistenceAdapter, "http://activemq.apache.org/schema/core":kahaDB, "http://activemq.apache.org/schema/core":levelDB, "http://activemq.apache.org/schema/core":mKahaDB, "http://activemq.apache.org/schema/core":memoryPersistenceAdapter, "http://activemq.apache.org/schema/core":replicatedLevelDB, WC[##other:"http://activemq.apache.org/schema/core"]}' 之一开头。
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:511)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3587)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1971)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.emptyElement(XMLSchemaValidator.java:849)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:351)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2725)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:541)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391)
+	... 25 more
+2021-03-16 23:28:09,279 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@31f924f5: startup date [Tue Mar 16 23:28:09 JST 2021]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2021-03-16 23:28:09,570 | ERROR | Failed to load: class path resource [activemq.xml], reason: Line 99 in XML document from class path resource [activemq.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 99; columnNumber: 42; cvc-complex-type.2.4.a: 发现了以元素 '{"http://activemq.apache.org/schema/core":journalPersistenceAdapterFactory}' 开头的无效内容。应以 '{"http://activemq.apache.org/schema/core":jdbcPersistenceAdapter, "http://activemq.apache.org/schema/core":journalPersistenceAdapter, "http://activemq.apache.org/schema/core":kahaDB, "http://activemq.apache.org/schema/core":levelDB, "http://activemq.apache.org/schema/core":mKahaDB, "http://activemq.apache.org/schema/core":memoryPersistenceAdapter, "http://activemq.apache.org/schema/core":replicatedLevelDB, WC[##other:"http://activemq.apache.org/schema/core"]}' 之一开头。 | org.apache.activemq.xbean.XBeanBrokerFactory | main
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 99 in XML document from class path resource [activemq.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 99; columnNumber: 42; cvc-complex-type.2.4.a: 发现了以元素 '{"http://activemq.apache.org/schema/core":journalPersistenceAdapterFactory}' 开头的无效内容。应以 '{"http://activemq.apache.org/schema/core":jdbcPersistenceAdapter, "http://activemq.apache.org/schema/core":journalPersistenceAdapter, "http://activemq.apache.org/schema/core":kahaDB, "http://activemq.apache.org/schema/core":levelDB, "http://activemq.apache.org/schema/core":mKahaDB, "http://activemq.apache.org/schema/core":memoryPersistenceAdapter, "http://activemq.apache.org/schema/core":replicatedLevelDB, WC[##other:"http://activemq.apache.org/schema/core"]}' 之一开头。
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:399)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.loadBeanDefinitions(ResourceXmlApplicationContext.java:111)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.loadBeanDefinitions(ResourceXmlApplicationContext.java:104)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:126)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:614)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:514)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:64)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:52)
+	at org.apache.activemq.xbean.XBeanBrokerFactory$1.<init>(XBeanBrokerFactory.java:104)
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createApplicationContext(XBeanBrokerFactory.java:104)
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createBroker(XBeanBrokerFactory.java:67)
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:71)
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:54)
+	at org.apache.activemq.console.command.StartCommand.runTask(StartCommand.java:87)
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)
+	at org.apache.activemq.console.command.ShellCommand.runTask(ShellCommand.java:154)
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)
+	at org.apache.activemq.console.command.ShellCommand.main(ShellCommand.java:104)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.activemq.console.Main.runTaskClass(Main.java:262)
+	at org.apache.activemq.console.Main.main(Main.java:115)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 99; columnNumber: 42; cvc-complex-type.2.4.a: 发现了以元素 '{"http://activemq.apache.org/schema/core":journalPersistenceAdapterFactory}' 开头的无效内容。应以 '{"http://activemq.apache.org/schema/core":jdbcPersistenceAdapter, "http://activemq.apache.org/schema/core":journalPersistenceAdapter, "http://activemq.apache.org/schema/core":kahaDB, "http://activemq.apache.org/schema/core":levelDB, "http://activemq.apache.org/schema/core":mKahaDB, "http://activemq.apache.org/schema/core":memoryPersistenceAdapter, "http://activemq.apache.org/schema/core":replicatedLevelDB, WC[##other:"http://activemq.apache.org/schema/core"]}' 之一开头。
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:511)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3587)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1971)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.emptyElement(XMLSchemaValidator.java:849)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:351)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2725)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:541)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391)
+	... 25 more
+2021-03-16 23:28:56,965 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@31f924f5: startup date [Tue Mar 16 23:28:56 JST 2021]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2021-03-16 23:28:57,287 | ERROR | Failed to load: class path resource [activemq.xml], reason: Line 94 in XML document from class path resource [activemq.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 94; columnNumber: 45; cvc-complex-type.2.4.a: 发现了以元素 '{"http://activemq.apache.org/schema/core":journalPersistenceAdapterFactory}' 开头的无效内容。应以 '{"http://activemq.apache.org/schema/core":jdbcPersistenceAdapter, "http://activemq.apache.org/schema/core":journalPersistenceAdapter, "http://activemq.apache.org/schema/core":kahaDB, "http://activemq.apache.org/schema/core":levelDB, "http://activemq.apache.org/schema/core":mKahaDB, "http://activemq.apache.org/schema/core":memoryPersistenceAdapter, "http://activemq.apache.org/schema/core":replicatedLevelDB, WC[##other:"http://activemq.apache.org/schema/core"]}' 之一开头。 | org.apache.activemq.xbean.XBeanBrokerFactory | main
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 94 in XML document from class path resource [activemq.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 94; columnNumber: 45; cvc-complex-type.2.4.a: 发现了以元素 '{"http://activemq.apache.org/schema/core":journalPersistenceAdapterFactory}' 开头的无效内容。应以 '{"http://activemq.apache.org/schema/core":jdbcPersistenceAdapter, "http://activemq.apache.org/schema/core":journalPersistenceAdapter, "http://activemq.apache.org/schema/core":kahaDB, "http://activemq.apache.org/schema/core":levelDB, "http://activemq.apache.org/schema/core":mKahaDB, "http://activemq.apache.org/schema/core":memoryPersistenceAdapter, "http://activemq.apache.org/schema/core":replicatedLevelDB, WC[##other:"http://activemq.apache.org/schema/core"]}' 之一开头。
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:399)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.loadBeanDefinitions(ResourceXmlApplicationContext.java:111)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.loadBeanDefinitions(ResourceXmlApplicationContext.java:104)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:126)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:614)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:514)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:64)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:52)
+	at org.apache.activemq.xbean.XBeanBrokerFactory$1.<init>(XBeanBrokerFactory.java:104)
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createApplicationContext(XBeanBrokerFactory.java:104)
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createBroker(XBeanBrokerFactory.java:67)
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:71)
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:54)
+	at org.apache.activemq.console.command.StartCommand.runTask(StartCommand.java:87)
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)
+	at org.apache.activemq.console.command.ShellCommand.runTask(ShellCommand.java:154)
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)
+	at org.apache.activemq.console.command.ShellCommand.main(ShellCommand.java:104)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.activemq.console.Main.runTaskClass(Main.java:262)
+	at org.apache.activemq.console.Main.main(Main.java:115)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 94; columnNumber: 45; cvc-complex-type.2.4.a: 发现了以元素 '{"http://activemq.apache.org/schema/core":journalPersistenceAdapterFactory}' 开头的无效内容。应以 '{"http://activemq.apache.org/schema/core":jdbcPersistenceAdapter, "http://activemq.apache.org/schema/core":journalPersistenceAdapter, "http://activemq.apache.org/schema/core":kahaDB, "http://activemq.apache.org/schema/core":levelDB, "http://activemq.apache.org/schema/core":mKahaDB, "http://activemq.apache.org/schema/core":memoryPersistenceAdapter, "http://activemq.apache.org/schema/core":replicatedLevelDB, WC[##other:"http://activemq.apache.org/schema/core"]}' 之一开头。
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:511)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3587)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1971)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.emptyElement(XMLSchemaValidator.java:849)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:351)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2725)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:541)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391)
+	... 25 more
+2021-03-16 23:29:26,733 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@31f924f5: startup date [Tue Mar 16 23:29:26 JST 2021]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2021-03-16 23:29:26,982 | ERROR | Failed to load: class path resource [activemq.xml], reason: Line 93 in XML document from class path resource [activemq.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 93; columnNumber: 101; cvc-complex-type.2.4.a: 发现了以元素 '{"http://activemq.apache.org/schema/core":journalPersistenceAdapterFactory}' 开头的无效内容。应以 '{"http://activemq.apache.org/schema/core":jdbcPersistenceAdapter, "http://activemq.apache.org/schema/core":journalPersistenceAdapter, "http://activemq.apache.org/schema/core":kahaDB, "http://activemq.apache.org/schema/core":levelDB, "http://activemq.apache.org/schema/core":mKahaDB, "http://activemq.apache.org/schema/core":memoryPersistenceAdapter, "http://activemq.apache.org/schema/core":replicatedLevelDB, WC[##other:"http://activemq.apache.org/schema/core"]}' 之一开头。 | org.apache.activemq.xbean.XBeanBrokerFactory | main
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 93 in XML document from class path resource [activemq.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 93; columnNumber: 101; cvc-complex-type.2.4.a: 发现了以元素 '{"http://activemq.apache.org/schema/core":journalPersistenceAdapterFactory}' 开头的无效内容。应以 '{"http://activemq.apache.org/schema/core":jdbcPersistenceAdapter, "http://activemq.apache.org/schema/core":journalPersistenceAdapter, "http://activemq.apache.org/schema/core":kahaDB, "http://activemq.apache.org/schema/core":levelDB, "http://activemq.apache.org/schema/core":mKahaDB, "http://activemq.apache.org/schema/core":memoryPersistenceAdapter, "http://activemq.apache.org/schema/core":replicatedLevelDB, WC[##other:"http://activemq.apache.org/schema/core"]}' 之一开头。
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:399)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.loadBeanDefinitions(ResourceXmlApplicationContext.java:111)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.loadBeanDefinitions(ResourceXmlApplicationContext.java:104)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:126)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:614)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:514)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:64)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:52)
+	at org.apache.activemq.xbean.XBeanBrokerFactory$1.<init>(XBeanBrokerFactory.java:104)
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createApplicationContext(XBeanBrokerFactory.java:104)
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createBroker(XBeanBrokerFactory.java:67)
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:71)
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:54)
+	at org.apache.activemq.console.command.StartCommand.runTask(StartCommand.java:87)
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)
+	at org.apache.activemq.console.command.ShellCommand.runTask(ShellCommand.java:154)
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)
+	at org.apache.activemq.console.command.ShellCommand.main(ShellCommand.java:104)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.activemq.console.Main.runTaskClass(Main.java:262)
+	at org.apache.activemq.console.Main.main(Main.java:115)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 93; columnNumber: 101; cvc-complex-type.2.4.a: 发现了以元素 '{"http://activemq.apache.org/schema/core":journalPersistenceAdapterFactory}' 开头的无效内容。应以 '{"http://activemq.apache.org/schema/core":jdbcPersistenceAdapter, "http://activemq.apache.org/schema/core":journalPersistenceAdapter, "http://activemq.apache.org/schema/core":kahaDB, "http://activemq.apache.org/schema/core":levelDB, "http://activemq.apache.org/schema/core":mKahaDB, "http://activemq.apache.org/schema/core":memoryPersistenceAdapter, "http://activemq.apache.org/schema/core":replicatedLevelDB, WC[##other:"http://activemq.apache.org/schema/core"]}' 之一开头。
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:511)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3587)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1971)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.emptyElement(XMLSchemaValidator.java:849)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:351)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2725)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:541)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391)
+	... 25 more
+2021-03-16 23:30:57,833 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@31f924f5: startup date [Tue Mar 16 23:30:57 JST 2021]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2021-03-16 23:30:58,839 | INFO  | Using Persistence Adapter: JournalPersistenceAdapter(JDBCPersistenceAdapter({
+	CreateTime:"2021-03-16 23:30:58",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})) | org.apache.activemq.broker.BrokerService | main
+2021-03-16 23:30:59,100 | INFO  | {dataSource-1} inited | com.alibaba.druid.pool.DruidDataSource | main
+2021-03-16 23:30:59,106 | INFO  | Database adapter driver override not found for : [mysql_connector_j].  Will use default implementation. | org.apache.activemq.store.jdbc.JDBCPersistenceAdapter | main
+2021-03-16 23:31:03,453 | INFO  | Database lock driver override not found for : [mysql_connector_j].  Will use default implementation. | org.apache.activemq.store.jdbc.JDBCPersistenceAdapter | main
+2021-03-16 23:31:03,455 | INFO  | Attempting to acquire the exclusive lock to become the Master broker | org.apache.activemq.store.jdbc.DefaultDatabaseLocker | main
+2021-03-16 23:31:03,459 | INFO  | Becoming the master on dataSource: {
+	CreateTime:"2021-03-16 23:30:58",
+	ActiveCount:1,
+	PoolingCount:4,
+	CreateCount:5,
+	DestroyCount:0,
+	CloseCount:3,
+	ConnectCount:4,
+	Connections:[
+		{ID:2065730373, ConnectTime:"2021-03-16 23:30:59", UseCount:0, LastActiveTime:"2021-03-16 23:30:59"},
+		{ID:96453207, ConnectTime:"2021-03-16 23:30:59", UseCount:0, LastActiveTime:"2021-03-16 23:30:59"},
+		{ID:877804870, ConnectTime:"2021-03-16 23:30:59", UseCount:0, LastActiveTime:"2021-03-16 23:30:59"},
+		{ID:2095970915, ConnectTime:"2021-03-16 23:30:59", UseCount:0, LastActiveTime:"2021-03-16 23:30:59"}
+	]
+} | org.apache.activemq.store.jdbc.DefaultDatabaseLocker | main
+2021-03-16 23:31:03,461 | INFO  | Journal Recovery Started from: Active Journal: using 2 x 20.0 Megs at: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\bin\activemqdata\journal | org.apache.activemq.store.journal.JournalPersistenceAdapter | main
+2021-03-16 23:31:03,470 | INFO  | Journal Recovered: 0 message(s) in transactions recovered. | org.apache.activemq.store.journal.JournalPersistenceAdapter | main
+2021-03-16 23:31:03,471 | INFO  | PListStore:[D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2021-03-16 23:31:03,606 | INFO  | Apache ActiveMQ 5.16.1 (localhost, ID:DESKTOP-L92Q0EQ-14315-1615905063481-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2021-03-16 23:31:03,634 | INFO  | Listening for connections at: tcp://DESKTOP-L92Q0EQ:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 23:31:03,635 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 23:31:03,638 | INFO  | Listening for connections at: amqp://DESKTOP-L92Q0EQ:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 23:31:03,639 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 23:31:03,642 | INFO  | Listening for connections at: stomp://DESKTOP-L92Q0EQ:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 23:31:03,643 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 23:31:03,648 | INFO  | Listening for connections at: mqtt://DESKTOP-L92Q0EQ:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 23:31:03,648 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 23:31:03,653 | INFO  | Starting Jetty server | org.apache.activemq.transport.WebTransportServerSupport | main
+2021-03-16 23:31:03,721 | INFO  | Creating Jetty connector | org.apache.activemq.transport.WebTransportServerSupport | main
+2021-03-16 23:31:03,844 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@3cf7298d{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2021-03-16 23:31:04,146 | INFO  | Listening for connections at ws://DESKTOP-L92Q0EQ:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2021-03-16 23:31:04,146 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 23:31:04,154 | INFO  | Listening for connections at: auto+nio://DESKTOP-L92Q0EQ:61608?maximumConnections=1000&wireFormat.maxFrameSize=104857600&org.apache.activemq.transport.nio.SelectorManager.corePoolSize=20&org.apache.activemq.transport.nio.SelectorManager.maximumPoolSize=50 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 23:31:04,154 | INFO  | Connector auto+nio started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 23:31:04,155 | INFO  | Apache ActiveMQ 5.16.1 (localhost, ID:DESKTOP-L92Q0EQ-14315-1615905063481-0:1) started | org.apache.activemq.broker.BrokerService | main
+2021-03-16 23:31:04,155 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2021-03-16 23:31:04,165 | WARN  | Store limit is 102400 mb (current store usage is 0 mb). The data directory: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\bin\activemqdata only has 23593 mb of usable space. - resetting to maximum available disk space: 23593 mb | org.apache.activemq.broker.BrokerService | main
+2021-03-16 23:31:04,173 | WARN  | Temporary Store limit is 51200 mb (current store usage is 0 mb). The data directory: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data only has 23593 mb of usable space. - resetting to maximum available disk space: 23593 mb | org.apache.activemq.broker.BrokerService | main
+2021-03-16 23:31:04,970 | INFO  | ActiveMQ WebConsole available at http://127.0.0.1:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2021-03-16 23:31:04,971 | INFO  | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2021-03-16 23:32:12,020 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@31f924f5: startup date [Tue Mar 16 23:32:12 JST 2021]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2021-03-16 23:32:12,891 | INFO  | Using Persistence Adapter: JournalPersistenceAdapter(JDBCPersistenceAdapter({
+	CreateTime:"2021-03-16 23:32:12",
+	ActiveCount:0,
+	PoolingCount:0,
+	CreateCount:0,
+	DestroyCount:0,
+	CloseCount:0,
+	ConnectCount:0,
+	Connections:[
+	]
+})) | org.apache.activemq.broker.BrokerService | main
+2021-03-16 23:32:13,186 | INFO  | {dataSource-1} inited | com.alibaba.druid.pool.DruidDataSource | main
+2021-03-16 23:32:13,193 | INFO  | Database adapter driver override not found for : [mysql_connector_j].  Will use default implementation. | org.apache.activemq.store.jdbc.JDBCPersistenceAdapter | main
+2021-03-16 23:32:13,196 | INFO  | Database lock driver override not found for : [mysql_connector_j].  Will use default implementation. | org.apache.activemq.store.jdbc.JDBCPersistenceAdapter | main
+2021-03-16 23:32:13,198 | INFO  | Attempting to acquire the exclusive lock to become the Master broker | org.apache.activemq.store.jdbc.DefaultDatabaseLocker | main
+2021-03-16 23:32:13,220 | INFO  | Becoming the master on dataSource: {
+	CreateTime:"2021-03-16 23:32:12",
+	ActiveCount:1,
+	PoolingCount:4,
+	CreateCount:5,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:3,
+	Connections:[
+		{ID:866901553, ConnectTime:"2021-03-16 23:32:13", UseCount:0, LastActiveTime:"2021-03-16 23:32:13"},
+		{ID:160945458, ConnectTime:"2021-03-16 23:32:13", UseCount:0, LastActiveTime:"2021-03-16 23:32:13"},
+		{ID:657998502, ConnectTime:"2021-03-16 23:32:13", UseCount:0, LastActiveTime:"2021-03-16 23:32:13"},
+		{ID:1788256184, ConnectTime:"2021-03-16 23:32:13", UseCount:0, LastActiveTime:"2021-03-16 23:32:13"}
+	]
+} | org.apache.activemq.store.jdbc.DefaultDatabaseLocker | main
+2021-03-16 23:32:13,222 | INFO  | Journal Recovery Started from: Active Journal: using 4 x 0.03125 Megs at: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\bin\activemq-data\journal | org.apache.activemq.store.journal.JournalPersistenceAdapter | main
+2021-03-16 23:32:13,231 | INFO  | Journal Recovered: 0 message(s) in transactions recovered. | org.apache.activemq.store.journal.JournalPersistenceAdapter | main
+2021-03-16 23:32:13,232 | INFO  | PListStore:[D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2021-03-16 23:32:13,363 | INFO  | Apache ActiveMQ 5.16.1 (localhost, ID:DESKTOP-L92Q0EQ-14340-1615905133241-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2021-03-16 23:32:13,388 | INFO  | Listening for connections at: tcp://DESKTOP-L92Q0EQ:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 23:32:13,389 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 23:32:13,392 | INFO  | Listening for connections at: amqp://DESKTOP-L92Q0EQ:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 23:32:13,393 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 23:32:13,396 | INFO  | Listening for connections at: stomp://DESKTOP-L92Q0EQ:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 23:32:13,397 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 23:32:13,401 | INFO  | Listening for connections at: mqtt://DESKTOP-L92Q0EQ:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 23:32:13,401 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 23:32:13,405 | INFO  | Starting Jetty server | org.apache.activemq.transport.WebTransportServerSupport | main
+2021-03-16 23:32:13,463 | INFO  | Creating Jetty connector | org.apache.activemq.transport.WebTransportServerSupport | main
+2021-03-16 23:32:13,583 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@7c129ef6{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2021-03-16 23:32:13,877 | INFO  | Listening for connections at ws://DESKTOP-L92Q0EQ:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2021-03-16 23:32:13,877 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 23:32:13,886 | INFO  | Listening for connections at: auto+nio://DESKTOP-L92Q0EQ:61608?maximumConnections=1000&wireFormat.maxFrameSize=104857600&org.apache.activemq.transport.nio.SelectorManager.corePoolSize=20&org.apache.activemq.transport.nio.SelectorManager.maximumPoolSize=50 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2021-03-16 23:32:13,887 | INFO  | Connector auto+nio started | org.apache.activemq.broker.TransportConnector | main
+2021-03-16 23:32:13,887 | INFO  | Apache ActiveMQ 5.16.1 (localhost, ID:DESKTOP-L92Q0EQ-14340-1615905133241-0:1) started | org.apache.activemq.broker.BrokerService | main
+2021-03-16 23:32:13,888 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2021-03-16 23:32:13,895 | WARN  | Store limit is 102400 mb (current store usage is 0 mb). The data directory: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\bin\activemq-data only has 23593 mb of usable space. - resetting to maximum available disk space: 23593 mb | org.apache.activemq.broker.BrokerService | main
+2021-03-16 23:32:13,903 | WARN  | Temporary Store limit is 51200 mb (current store usage is 0 mb). The data directory: D:\code\MQ\ActiveMQ\apache-activemq-5.16.1\data only has 23593 mb of usable space. - resetting to maximum available disk space: 23593 mb | org.apache.activemq.broker.BrokerService | main
+2021-03-16 23:32:14,822 | INFO  | ActiveMQ WebConsole available at http://127.0.0.1:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2021-03-16 23:32:14,822 | INFO  | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
