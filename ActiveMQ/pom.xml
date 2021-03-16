@@ -14,7 +14,6 @@
         <module>03_spring</module>
         <module>05_protocol</module>
         <module>06_persistence</module>
-        <module>07_cluster</module>
     </modules>
 
     <properties>
