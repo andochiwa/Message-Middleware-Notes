@@ -1,8 +1,8 @@
 # 目录
 
-|                              1                               |
-| :----------------------------------------------------------: |
-| [ActiveMQ](https://github.com/andochiwa/Message-Middleware-Notes/tree/master/ActiveMQ) |
+|                              1                               |                              2                               |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+| [ActiveMQ](https://github.com/andochiwa/Message-Middleware-Notes/tree/master/ActiveMQ) | [RabbitMQ](https://github.com/andochiwa/Message-Middleware-Notes/tree/master/RabbitMQ) |
 
 
 
