@@ -1,5 +1,8 @@
 # Index
 
+1. [工作模式&核心组成](https://github.com/andochiwa/Message-Middleware-Notes/tree/master/RabbitMQ/01_pattern)
+2. [整合springboot](https://github.com/andochiwa/Message-Middleware-Notes/tree/master/RabbitMQ/02_springboot)
+
 
 
 # 简介
