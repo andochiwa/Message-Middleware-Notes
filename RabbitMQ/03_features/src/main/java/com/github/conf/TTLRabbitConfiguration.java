@@ -19,21 +19,24 @@ import java.util.Map;
 public class TTLRabbitConfiguration {
 
     @Bean
-    public DirectExchange directExchange() {
+    public DirectExchange ttlDirectExchange() {
         return new DirectExchange("ttl_direct_exchange", true, false);
     }
 
     @Bean
-    public Queue ttlDirectQueue(DirectExchange directExchange) {
-        // 设置过期时间
+    public Queue ttlDirectQueue() {
         Map<String, Object> map = new HashMap<>();
-        map.put("x-message-ttl", 5000);
+        map.put("x-message-ttl", 10000); // 设置过期时间
+        map.put("x-max-length", 5); // 指定队列长度
+        // 配置死信队列信息
+        map.put("x-dead-letter-exchange", "dead_direct_exchange");
+        map.put("x-dead-letter-routing-key", "dead"); // 如果是fanout模式则不需要路由key
         return new Queue("ttl.direct.queue", true, false, false, map);
     }
 
     @Bean
-    public Binding ttlQueueBinding(Queue ttlDirectQueue, DirectExchange directExchange) {
-        return BindingBuilder.bind(ttlDirectQueue).to(directExchange).with("ttl");
+    public Binding ttlQueueBinding(Queue ttlDirectQueue, DirectExchange ttlDirectExchange) {
+        return BindingBuilder.bind(ttlDirectQueue).to(ttlDirectExchange).with("ttl");
     }
 
 }

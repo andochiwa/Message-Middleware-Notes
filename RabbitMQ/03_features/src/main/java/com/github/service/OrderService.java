@@ -24,7 +24,7 @@ public class OrderService {
 
         // 给消息设置过期时间
         MessagePostProcessor messagePostProcessor = message -> {
-            message.getMessageProperties().setExpiration("3000");
+            message.getMessageProperties().setExpiration("50000");
             return message;
         };
         rabbitTemplate.convertAndSend("ttl_direct_exchange", "ttl", orderId, messagePostProcessor);
