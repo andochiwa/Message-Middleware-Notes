@@ -2,6 +2,8 @@
 
 1. [工作模式&核心组成](https://github.com/andochiwa/Message-Middleware-Notes/tree/master/RabbitMQ/01_pattern)
 2. [整合springboot](https://github.com/andochiwa/Message-Middleware-Notes/tree/master/RabbitMQ/02_springboot)
+3. [高级特性](https://github.com/andochiwa/Message-Middleware-Notes/tree/master/RabbitMQ/03_features)
+4. [分布式事务](https://github.com/andochiwa/Message-Middleware-Notes/tree/master/RabbitMQ/04_distribution-transaction)
 
 
 
@@ -66,3 +68,15 @@ RabbitMQ是一个开源的，基于Erlang语言编写，遵循AMQP协议实现�
 2. 一般来说在消费者这边创建比较好，消息的消费是在这边，这样可能生产在生产消息时丢失消息
 3. 在生产者创建队列也可以，也是比较稳妥的方法，不会造成消息丢失
 4. 也可以都两边创建，谁先启动谁先创建
+
+
+
+> 在RabbitMQ的分布式事务中出现异常会发生什么事情？该如何解决？
+
+分布式事务中出现异常时，会触发RabbitMQ的消息重试机制，造成死循环
+
+解决消息重试的几种方案
+
+1. 控制重发的次数，到达一定次数就移除，如果配置了死信队列则放进死信队列
+2. try-catch + 手动ack
+3. try-catch + 手动ack + 死信队列
