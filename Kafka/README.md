@@ -75,3 +75,19 @@ Kafka通过Zookeeper存储集群的meta等信息。
 **Docker真香！**
 
 使用主目录文件`docker-compose.yml`然后 docker compose 直接安装即可！
+
+## 命令行操作
+
+```bash
+# 在zookeeper创建一个分区为2，集群复制为1的test topic
+kafka-topics.sh --create --zookeeper zookeeper:2181 --topic test --partitions 2 --replication-factor 1 
+# 删除test topic
+kafka-topics.sh --delete --zookeeper zookeeper:2181 --topic test 
+# topic list
+kafka-topics.sh --list --zookeeper zookeeper:2181
+# 在topic上生产
+kafka-console-producer.sh --bootstrap-server localhost:9092 --topic test
+# 在topic上消费
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test
+```
+
