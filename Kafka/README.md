@@ -65,3 +65,13 @@ Kafka 集群中的其中一台服务器，用来进行 Leader election 以及各
 ### 11. ZooKeeper
 
 Kafka通过Zookeeper存储集群的meta等信息。
+
+# Kafka 快速入门
+
+## 安装
+
+必须先启动zookeeper，有点儿麻烦，所以我选择
+
+**Docker真香！**
+
+使用主目录文件`docker-compose.yml`然后 docker compose 直接安装即可！
