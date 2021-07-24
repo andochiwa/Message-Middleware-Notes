@@ -120,3 +120,19 @@ partition全局的第一个 segment 从 0 开始，后续每个 segment 文件�
 <img src="img/6.png" style="zoom:150%;" />
 
 og 文件和 index 文件都是以当前文件中的最小偏移量的值命名。index 文件存储大量的索引信息，log 文件存储大量的数据，**索引文件中的元数据对应数据文件中消息的物理偏移地址**。查找消息的时候，会根据 offset 值以二分查找的方式查找对应的索引文件，找到消息在 log 文件中的偏移量，最终找到消息。这也就能够保证，消费者挂掉重启的时候，可以根据 offset 值快速找到上次消费的断点位置。
+
+## 生产者分区策略
+
+### 分区的原因
+
+1. **方便在集群中扩展**，每个 Partition 可以通过调整以适应它所在的机器，而一个 Topic 又可以由多个 Partition 组成，因此整个集群可以适应任意大小的数据
+2. **提高并发**，因为可以以 Partition 为单位读写数据
+
+### 分区的原则
+
+我们需要将 Producer 发送的数据封装成一个`ProducerRecord`对象
+
+1. 指明 Partition 的情况下，直接将指明的值作为 Partition 的值
+2. 没有指明 Partition 值但有 Key 的情况下，将 Key 的 hash 值与 Topic 的 Partition 数进行取余得到 Partition 值
+3. 既没有 Partition 的值又没有 Key 值的情况下，第一次调用时随机生成一个整数，将这个值与 Topic 可用的 Partition 总数取余得到 Partition，也就是 round-robin 算法
+
