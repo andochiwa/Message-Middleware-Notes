@@ -92,3 +92,17 @@ kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test
 ```
 
 # Kafka 架构深入
+
+## 工程流程
+
+![](img/5.png)
+
+Kafka 中的消息是以 Topic 进行分类的，生产者生产消息，消费者消费消息，都是面向 Topic 的。
+
+Topic 是逻辑上的概念，而 Partition 是物理上的概念，每个 Partition 对应一个 log 文件，该 log 文件中存储的是 producer 生产的数据。producer 生产的数据会被不断追加到该 log 文件的末端，且每条数据都有自己的 offset。消费者组中的每个消费者，都会实时记录自己消费到了哪个 offset，以便出错恢复时，从上次的位置继续消费。
+
+## 文件存储机制
+
+![](img/3.png)
+
+![](img/4.png)
