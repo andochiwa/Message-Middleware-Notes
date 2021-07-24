@@ -105,4 +105,18 @@ Topic 是逻辑上的概念，而 Partition 是物理上的概念，每个 Parti
 
 ![](img/3.png)
 
-![](img/4.png)
+<img src="img/4.png" style="zoom:100%;" />
+
+由于生产者生产的消息会不断追加到 log 文件末端，为防止 log 文件过大导致数据定位效率低，kafka 采取了分片和索引机制，将每个 partition 分为多个 segment（逻辑上的概念，index + log 文件）
+
+每个 partition（目录）相当于一个巨型文件被平均分配到多个大小相等的 segment（片段）数据文件中（每个 segment 文件中消息数量不一定相等），这种特性也方便 old segment 的删除，即方便已被消费的消息的清理，提高磁盘的利用率。每个 partition 只需要支持顺序读写就行，segment 的文件生命周期由服务端配置参数（log.segment.bytes，log.roll.{ms,hours}等若干参数）决定
+
+每个 segment 对应两个文件 ----“.index” 和 “.log” 文件。分别表示为 segment 索引文件和数据文件（引入索引文件的目的就是便于利用二分查找快速定位 message 位置）。这两个文件的命名规则为：
+
+partition全局的第一个 segment 从 0 开始，后续每个 segment 文件名以当前 segment 的第一条消息的 offset 命名，数值大小为 64 位，20 位数字字符长度，没有数字用 0 填充。
+
+这些文件位于一个文件夹下（partition目录），改文件夹的命名规则：topic 名+分区序号。例如，first 这个 topic 有三个分区，则其对应的文件夹为first-0，first-1，first-2
+
+<img src="img/6.png" style="zoom:150%;" />
+
+og 文件和 index 文件都是以当前文件中的最小偏移量的值命名。index 文件存储大量的索引信息，log 文件存储大量的数据，**索引文件中的元数据对应数据文件中消息的物理偏移地址**。查找消息的时候，会根据 offset 值以二分查找的方式查找对应的索引文件，找到消息在 log 文件中的偏移量，最终找到消息。这也就能够保证，消费者挂掉重启的时候，可以根据 offset 值快速找到上次消费的断点位置。
