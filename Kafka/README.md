@@ -153,3 +153,42 @@ Kafka 选择了第二种方案，原因：
 
 1. 同样为了容忍 n 台节点的故障，第一种方案需要 2n+1 个副本，而第二种方案只需要 n+1 个副本，而 Kafka 的每个分区都有大量的数据，第一种方案会造成大量数据的冗余
 2. 虽然第二种方案的网络延迟比较高，但网络延迟对 Kafka 影响较小
+
+### ISR
+
+采用第二种方案后，设想以下情景：
+
+leader 收到数据，所有 follower 都开始同步数据，但有一个 follower，因为某种故障迟迟不能与 leader 进行同步，那么 leader 就要一直等一去，直到它完成同步才能发送ask，这种问题如何解决？
+
+leader 维护了一个动态的 in-sync replica set（ISR），意味和 leader 保持同步的 follower 集合。当 ISR 中的 follower 完成数据的同步之后，leader 就会给 follower 发送 ask。如果 follower 长时间未向 leader 同步数据，则该 follower 将被踢出 ISR，该事件阈值由 replica.lag.time.max.ms 参数设定。leader 发生故障之后，就会从 ISR 中选举新的 leader
+
+### ack 应答机制
+
+对于某些不太重要的数据，对数据的可靠性要求不是很高，能够容忍数据的少量丢失，所以没必要等 ISR 中的 follower 全部接受成功
+
+所以 Kafka 为用户提供了三种可靠性级别，用户根据对可靠性和延迟的要求进行权衡。
+
+#### acks 参数配置
+
+0：producer 不等待 broker 的 ack，这一操作提供了一个最低的延迟，broker 一接收到数据还没有写入磁盘就已经返回，当 broker故障时有可能**丢失数据**
+
+1：producer 等待 broker 的 ack，partition 的 leader 落盘成功后返回 ack，如果在 follower 同步成功之前 leader 故障，那么将会**丢失数据**
+
+-1：producer 等待 broker 的 ack，partition 的 leader 和 follower 全部落盘成功后才返回 ack。但是如果 follower 同步成功后，broker 发送 ack 之前，leader发生故障，那么将会造成**数据重复**
+
+## 数据一致性问题
+
+这里的数据一致性主要是说不论是老的 Leader 还是新选举的 Leader，Consumer 都能读到一样的数据。那么 Kafka 是如何实现的呢？
+
+<img src="img/8.png" style="zoom:150%;" />
+
+首先先介绍 **HW(HighWatermark)高水位**，取一个 partition 对应的 ISR 中最小的 LEO 作为 HW，consumer 最多只能消费到 HW 所在的位置。另外每个 replica 都有 HW,leader 和 followe r各自负责更新自己的 HW 的状态。对于 leader 新写入的消息，consumer 不能立刻消费，leader 会等待该消息被所有 ISR中 的 replicas 同步后更新 HW，此时消息才能被 consumer 消费。这样就保证了如果 leader 所在的 broker 失效，该消息仍然可以从新选举的 leader 中获取。对于来自内部 broker 的读取请求，没有 HW 的限制
+
+如上图，某个topic的某partition有三个副本，分别为 A、B、C。A 作为leader肯定是 LEO 最高，B 紧随其后，C 机器由于配置比较低，网络比较差，故而同步最慢。这个时候 A 机器宕机，这时候如果 B 成为 leader，假如没有 HW，在 A 重新恢复之后会做同步 (makeFollower) 操作，在宕机时log 文件之后直接做追加操作，而假如 B 的 LEO 已经达到了 A 的 LEO，会产生数据不一致的情况，所以使用 HW 来避免这种情况。
+A 在做同步操作的时候，先将 log 文件截断到之前自己的 HW 的位置，即 3，之后再从 B 中拉取消息进行同步。
+
+这样做的原因是还没有被足够多副本复制的消息被认为是“不安全”的，如果 Leader 发生崩溃，另一个副本成为新 Leader，那么这些消息很可能丢失了。如果我们允许消费者读取这些消息，可能就会破坏一致性。试想，一个消费者从当前 Leader（副本0） 读取并处理了 4，这个时候 Leader 挂掉了，选举了副本 1 为新的 Leader，这时候另一个消费者再去从新的 Leader 读取消息，发现这个消息其实并不存在，这就导致了数据不一致性问题。
+
+如果失败的 follower 恢复过来，它首先将自己的 log 文件截断到上次 checkpointed 时刻的 HW 的位置，之后再从 leader 中同步消息。leader 挂掉会重新选举，新的 leader 会发送“指令”让其余的 follower 截断至自身的 HW 的位置然后再拉取新的消息。
+
+当 ISR 中的个副本的LEO不一致时，如果此时leader挂掉，选举新的leader时并不是按照LEO的高低进行选举，而是按照ISR中的顺序选举。
