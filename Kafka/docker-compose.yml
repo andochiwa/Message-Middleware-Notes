@@ -22,17 +22,5 @@ services:
     networks:
       - kafka_test
     container_name: kafka
-  kafka-manager:
-    image: kafkamanager/kafka-manager:3.0.0.4
-    ports:
-      - "9000:9000"
-    environment:
-      - ZK_HOSTS=zookeeper:2181
-    depends_on:
-      - kafka
-      - zookeeper
-    networks:
-      - kafka_test
-    container_name: kafka-manager
 networks:
   kafka_test:
