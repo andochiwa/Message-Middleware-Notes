@@ -121,14 +121,16 @@ partition全局的第一个 segment 从 0 开始，后续每个 segment 文件�
 
 og 文件和 index 文件都是以当前文件中的最小偏移量的值命名。index 文件存储大量的索引信息，log 文件存储大量的数据，**索引文件中的元数据对应数据文件中消息的物理偏移地址**。查找消息的时候，会根据 offset 值以二分查找的方式查找对应的索引文件，找到消息在 log 文件中的偏移量，最终找到消息。这也就能够保证，消费者挂掉重启的时候，可以根据 offset 值快速找到上次消费的断点位置。
 
-## 生产者分区策略
+## Kafka 生产者
 
-### 分区的原因
+### 分区策略
+
+#### 分区的原因
 
 1. **方便在集群中扩展**，每个 Partition 可以通过调整以适应它所在的机器，而一个 Topic 又可以由多个 Partition 组成，因此整个集群可以适应任意大小的数据
 2. **提高并发**，因为可以以 Partition 为单位读写数据
 
-### 分区的原则
+#### 分区的原则
 
 我们需要将 Producer 发送的数据封装成一个`ProducerRecord`对象
 
@@ -136,13 +138,13 @@ og 文件和 index 文件都是以当前文件中的最小偏移量的值命名�
 2. 没有指明 Partition 值但有 Key 的情况下，将 Key 的 hash 值与 Topic 的 Partition 数进行取余得到 Partition 值
 3. 既没有 Partition 的值又没有 Key 值的情况下，第一次调用时随机生成一个整数，将这个值与 Topic 可用的 Partition 总数取余得到 Partition，也就是 round-robin 算法
 
-## 生产者数据可靠性保证
+### 数据可靠性保证
 
 为保证 producer 发送的数据，能可靠的发送到指定的 topic，topic 的每个 partition 收到 producer 发送的数据后，都需要向 producer 发送 ask，如果producer 收到 ask，就会进行下一轮的发送，否则重新发送数据
 
 ![](img/7.png)
 
-### 副本同步策略
+#### 副本同步策略
 
 |             方案             |                             优点                             |                             缺点                             |
 | :--------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
@@ -154,7 +156,7 @@ Kafka 选择了第二种方案，原因：
 1. 同样为了容忍 n 台节点的故障，第一种方案需要 2n+1 个副本，而第二种方案只需要 n+1 个副本，而 Kafka 的每个分区都有大量的数据，第一种方案会造成大量数据的冗余
 2. 虽然第二种方案的网络延迟比较高，但网络延迟对 Kafka 影响较小
 
-### ISR
+#### ISR
 
 采用第二种方案后，设想以下情景：
 
@@ -162,13 +164,13 @@ leader 收到数据，所有 follower 都开始同步数据，但有一个 follo
 
 leader 维护了一个动态的 in-sync replica set（ISR），意味和 leader 保持同步的 follower 集合。当 ISR 中的 follower 完成数据的同步之后，leader 就会给 follower 发送 ask。如果 follower 长时间未向 leader 同步数据，则该 follower 将被踢出 ISR，该事件阈值由 replica.lag.time.max.ms 参数设定。leader 发生故障之后，就会从 ISR 中选举新的 leader
 
-### ack 应答机制
+#### ack 应答机制
 
 对于某些不太重要的数据，对数据的可靠性要求不是很高，能够容忍数据的少量丢失，所以没必要等 ISR 中的 follower 全部接受成功
 
 所以 Kafka 为用户提供了三种可靠性级别，用户根据对可靠性和延迟的要求进行权衡。
 
-#### acks 参数配置
+**acks 参数配置：**
 
 0：producer 不等待 broker 的 ack，这一操作提供了一个最低的延迟，broker 一接收到数据还没有写入磁盘就已经返回，当 broker故障时有可能**丢失数据**
 
@@ -176,7 +178,7 @@ leader 维护了一个动态的 in-sync replica set（ISR），意味和 leader 
 
 -1：producer 等待 broker 的 ack，partition 的 leader 和 follower 全部落盘成功后才返回 ack。但是如果 follower 同步成功后，broker 发送 ack 之前，leader发生故障，那么将会造成**数据重复**
 
-## 数据一致性问题
+### 数据一致性问题
 
 这里的数据一致性主要是说不论是老的 Leader 还是新选举的 Leader，Consumer 都能读到一样的数据。那么 Kafka 是如何实现的呢？
 
@@ -192,3 +194,21 @@ A 在做同步操作的时候，先将 log 文件截断到之前自己的 HW 的
 如果失败的 follower 恢复过来，它首先将自己的 log 文件截断到上次 checkpointed 时刻的 HW 的位置，之后再从 leader 中同步消息。leader 挂掉会重新选举，新的 leader 会发送“指令”让其余的 follower 截断至自身的 HW 的位置然后再拉取新的消息。
 
 当 ISR 中的个副本的LEO不一致时，如果此时leader挂掉，选举新的leader时并不是按照LEO的高低进行选举，而是按照ISR中的顺序选举。
+
+## Kafka 消费者
+
+### 消费方式
+
+consumer 采用 pull 模式从 broker 中读取数据
+
+push 模式很难适应消费速率不同的消费者，因为消息发送速率是由 broker 决定的。它的目标是尽可能以最快速度传递消息，但是这样很容易造成 consumer 来不及处理消息，典型的表现就是拒绝服务以及网络拥塞。而 pull 模式则可以根据 consumer 的消费能力以适当的速率消费消息。
+
+pull 模式不足之处是，如果 kafka 没有数据，消费者可能会陷入循环中，一直返回空数据。针对这一点，kafka 的消费者在消费数据时传入一个时长参数 timeout，如果当前没有数据可供消费，consumer 会等待一段时间之后返回，这段时长即为timeout。
+
+### 分区分配策略
+
+一个 consumer group 中有多个consumer，一个 topic 有多个 partition，所以必然会涉及到 partition 的分配问题，即确定哪个 partition 由哪个 consumer 来消费
+
+Kafka 有两种分配策略，一个是 RoundRobin（轮询），一个是 Range（随机）
+
+#### 1. RoundRobin
