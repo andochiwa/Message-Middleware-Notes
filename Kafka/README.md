@@ -237,3 +237,9 @@ Sticky 分配策略的原理比较复杂，它的设计主要实现了两个目�
 ### offset 维护
 
 由于 consumer 在消费过程中可能会出现断电宕机等故障，consumer 恢复后，需要从故障前的位置继续消费，所以 consumer 需要实时记录自己消费到了哪个 offset，以便故障恢复后继续消费
+
+![](img/9.png)
+
+Kafka0.9 版本之前，consumer 默认将 offset 保存在 Zookeeper 中，从 0.9 版本开始，consumer 默认将 offset 保存在 Kafka 一个内置的 topic 中，该 topic 为 `__consumer_offsets`
+
+![](img/10.png)
