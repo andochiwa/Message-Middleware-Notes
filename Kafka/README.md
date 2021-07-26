@@ -271,3 +271,17 @@ kafka 数据写入、是写入这块内存空间，但实际这块内存和 OS �
 Kafka 集群中有一个 broker 会选举为 Controller，负责管理集群 broker 的**上下线**，所有 topic 的**分区副本分配**和**leader选举**等工作
 
 Controller 的管理工作都是依赖于 Zookeeper 的
+
+## Kafka 事务
+
+Kafka 从 0.11 版本开始引入了事务支持。事务可以保证 Kafka 在 Exactly Once 语义的基础上，生产和消费可以跨分区和会话，保证原子性。
+
+### Producer 事务
+
+为了实现跨分区跨会话的事务，需要引入一个全局唯一的 TransactionID（由客户端提供），并将 producer 获得的 PID 和 TransactionID 绑定。这样当 producer 重启后就可以通过正在进行的 TransactionID 获得原来的 PID
+
+为了管理 Transaction，Kafka 引入了一个新的组件 Transaction Coordinator。producer 就是通过和 Transaction Coordinator 交互获得 TransactionID 对应的任务状态。Transaction Coordinator 还负责将事务写入 Kafka 的一个内部 Topic，这样即使整个服务重启，由于事务状态得到保存，进行中的事务状态可以得到恢复，从而继续进行。
+
+### Consumer 事务
+
+上述事务主要从 producer 方面考虑，对于 consumer而言，事务的保证就会相对比较弱，尤其是无法保证 commit 的信息被精确消费。这是由于 consumer 可以通过 offset 访问任意信息，而不同的 segment file 生命周期不同，同一个事务的消息可能会出现重启后被删除的情况
