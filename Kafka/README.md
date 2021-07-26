@@ -285,3 +285,23 @@ Kafka 从 0.11 版本开始引入了事务支持。事务可以保证 Kafka 在 
 ### Consumer 事务
 
 上述事务主要从 producer 方面考虑，对于 consumer而言，事务的保证就会相对比较弱，尤其是无法保证 commit 的信息被精确消费。这是由于 consumer 可以通过 offset 访问任意信息，而不同的 segment file 生命周期不同，同一个事务的消息可能会出现重启后被删除的情况
+
+# Kafka API
+
+## Producer API
+
+### 消息发送流程
+
+Kafka 的 producer 发送消息采用的是异步发送的方式。在消息发送的过程中，涉及到了**两个线程—— main 线程和 Sender线程**，以及一个线程共享变量 **RecordAccumulator**。main 线程将消息发送给 RecordAccumulator，Sender 线程不断从 RecordAccumulator 中拉取消息发送到 Kafka broker
+
+<img src="img/11.png" style="zoom:125%;" />
+
+参数：
+
+batch.size: 只有数据积累到 batch.size 之后，Sender 才会发送数据
+
+linger.ms: 如果数据迟迟未到 batch.size，Sender 等待 linger.ms 后发送数据
+
+## 异步发送 API
+
+[配置参数](http://kafka.apache.org/documentation.html#producerconfigs)
