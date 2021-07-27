@@ -14,6 +14,5 @@ services:
       KAFKA_LISTENERS: PLAINTEXT://:9092
     depends_on:
       - zookeeper
-    networks:
     container_name: kafka
     network_mode: host
